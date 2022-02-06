@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(to top, #30cfd0 0%, #330867 100%) fixed;
+	font-family: monospace;
+	overflow-x: hidden;
+}
+
+input,
+select,
+option {
+	font-family: monospace;
+}
+
+/* Search Box */
+
+.main-container {
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.main-container h1 {
+	font-family: "Mochiy Pop P One", sans-serif;
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	color: white;
+	letter-spacing: 2px;
+}
+
+.main-container input,
+#options {
+	padding: 0.7rem;
+	border: none;
+	float: left;
+	font-size: 1.1em;
+	height: 40px;
+}
+
+#search {
+	width: 60%;
+}
+
+#submit {
+	width: 20%;
+	background: #21a57e;
+	cursor: pointer;
+	font-weight: 800;
+}
+
+select {
+	width: 20%;
+}
+
+.search-submit {
+	width: 50vw;
+	max-width: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+hr {
+	margin: 2rem auto;
+	width: 60vw;
+	max-width: 1600px;
+	height: 2px;
+	background: black;
+	border: none;
+}
+
+/* Storage Area*/
+
+.store-container {
+	height: 70vh;
+	width: 80vw;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: start;
+	max-width: 1400px;
+}
+
+.todo,
+.done {
+	width: 45%;
+	height: auto;
+	margin-bottom: 5vw;
+}
+
+.todo h2,
+.done h2 {
+	position: relative;
+	font-family: monospace;
+	font-size: 1.5rem;
+	text-align: center;
+	margin-bottom: 1rem;
+	padding-bottom: 10px;
+	color: white;
+	font-weight: 400;
+}
+
+.todo-store,
+.done-store {
+	height: 45px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.1rem;
+	width: 100%;
+	margin: 0.4rem 0;
+	transition: 0.3s ease;
+	overflow: hidden;
+}
+
+.todo-store:hover,
+.done-store:hover {
+	height: 60px;
+	box-shadow: 0 0 5px black;
+	transition: 0.3s ease;
+}
+
+.todo-store input,
+.done-store input {
+	height: 100%;
+	font-size: 1.1em;
+	background: none;
+	border: none;
+}
+
+.todo-store input[type="text"],
+.done-store input[type="text"] {
+	width: 80%;
+	padding-left: 1em;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.todo-store input[type="button"],
+.done-store input[type="button"] {
+	width: 20%;
+	background-color: #21a57d;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	cursor: pointer;
+}
+
+#todo {
+	background-image: url(img/rightArrow.png);
+}
+
+#done {
+	background-image: url(img/leftArrow.png);
+}
+
+#delete {
+	background-image: url(img/delete.png);
+	background-size: 20px;
+	background-color: rgba(255, 2, 2, 0.3);
+	width: 10%;
+}
+
+#change {
+	background-image: url(img/delete.png);
+}
+
+/* Hover*/
+
+#search:hover,
+#options:hover {
+	background-color: rgb(233, 233, 233);
+	font-weight: 800;
+	transition: 0.3s ease;
+}
+
+#submit:hover {
+	background-color: #32cfa0;
+	transition: 0.3s ease;
+}
+input[type="text"]:hover,
+input[type="text"]:focus {
+	background: rgba(255, 255, 255);
+	transition: 0.3s ease;
+	font-weight: 800;
+}
+
+#delete:hover {
+	background-color: rgb(255, 2, 2, 0.6);
+	transition: 0.3s ease;
+}
+
+/* Media */
+
+@media screen and (max-width: 840px) {
+	.main-container h1 {
+		font-size: 1.8rem;
+	}
+	.search-submit {
+		width: 70vw;
+	}
+
+	hr {
+		width: 90%;
+	}
+
+	select {
+		width: 30%;
+		font-size: 0.9em;
+	}
+
+	.store-container {
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+	}
+	.todo,
+	.done {
+		width: 100%;
+	}
+}
