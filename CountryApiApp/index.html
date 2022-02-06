@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Countries API</title>
+	</head>
+	<body>
+		<!-- Earth Background Img -->
+		<div class="img-container">
+			<img id="earth" src="img/earth.png" alt="" />
+		</div>
+
+		<!-- Countries -->
+
+		<section class="container">
+			<h1>Learn About Countries!</h1>
+			<div class="content">
+				<!-- Search Area -->
+				<label for="country-search">Country</label>
+				<div class="search-functions">
+					<input type="text" name="country-search" id="country-search" />
+					<input type="button" value="Search" id="country-submit" />
+				</div>
+
+				<!-- Dynamic flag svg -->
+				<div class="flag-img">
+					<img src="" alt="" id="flag" />
+				</div>
+
+				<!-- Country Details -->
+				<div class="country-details">
+					<div class="details-item">
+						<h3>Name</h3>
+						<span id="name"></span>
+					</div>
+					<div class="details-item">
+						<h3>Capital City</h3>
+						<span id="capital"></span>
+					</div>
+					<div class="details-item">
+						<h3>Region</h3>
+						<span id="region"></span>
+					</div>
+					<div class="details-item">
+						<h3>Sub-Region</h3>
+						<span id="subRegion"></span>
+					</div>
+					<div class="details-item">
+						<h3>Population</h3>
+						<span id="population"></span>
+					</div>
+					<div class="details-item">
+						<h3>Currency</h3>
+						<span id="currencyName"></span>
+						<span id="currencySymbol"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Currency -->
+
+		<section class="container">
+			<h1>Search World Currencies!</h1>
+			<div class="content">
+				<!-- Search Area -->
+				<label for="currency-search">Currency</label><br />
+				<input type="text" name="currency-search" id="currency-search" />
+				<input type="button" value="Search" id="currency-submit" />
+
+				<!-- Country Details -->
+				<div class="currency-details">
+					<h3>
+						This currency is used by <span id="amount"></span> countries around
+						the world.
+					</h3>
+
+					<h3>Which includes:</h3>
+				</div>
+			</div>
+		</section>
+
+		<!-- Language -->
+
+		<section class="container">
+			<h1>Language Locator!</h1>
+			<div class="content">
+				<!-- Search Area -->
+				<label for="language-search">Language</label><br />
+				<input type="text" name="language-search" id="language-search" />
+				<input type="button" value="Search" id="language-submit" />
+
+				<!-- Language Details -->
+				<div class="language-details">
+					<h3>
+						<span id="language-name"></span> is spoken in
+						<span id="language-amount"></span>
+					</h3>
+					<h3>Which includes:</h3>
+				</div>
+			</div>
+		</section>
+
+		<!-- Capital City -->
+
+		<section class="container">
+			<h1>Find Countries Using Capital</h1>
+			<div class="content">
+				<div class="content-flagBG"></div>
+				<!-- Search Area -->
+				<label for="capital-search">Capital City</label><br />
+				<input type="text" name="capital-search" id="capital-search" />
+				<input type="button" value="Search" id="capital-submit" />
+
+				<!-- Language Details -->
+				<div class="capital-details">
+					<h3><span id="capital-name"></span> is the capital city of:</h3>
+					<!-- Flag JS function -->
+					<h2 id="capital-answer"></h2>
+				</div>
+			</div>
+		</section>
+
+		<!-- Options -->
+		<div class="options-container">
+			<div class="filter-options">
+				<button id="country-option">Country</button>
+				<button id="currency-option">Currency</button>
+				<button id="language-option">Language</button>
+				<button id="capital-option">Capital</button>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
