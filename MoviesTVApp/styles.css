@@ -1,0 +1,327 @@
+:root {
+	--primary-header: 2.5rem;
+	--secondary-header: 1rem;
+	--text-size: 1.2rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Baloo Bhaijaan 2", cursive;
+	background-color: rgb(10, 10, 10);
+	color: white;
+	font-size: var(--text-size);
+}
+
+h1,
+h2 {
+	font-family: "Baloo Bhaijaan 2", cursive;
+	font-size: var(--primary-header);
+	color: #ffb458;
+}
+
+h3 {
+	font-size: var(--secondary-header);
+}
+
+/* Navbar */
+
+header {
+	background: #13133a;
+	height: auto;
+}
+
+form {
+	margin-left: auto;
+	height: 30px;
+	display: flex;
+}
+
+.searchbox {
+	border: none;
+	height: 100%;
+	width: 200px;
+	padding: 0.5rem;
+	font-size: 0.9em;
+}
+
+.search-submit {
+	border: none;
+	height: 100%;
+	width: 30px;
+	background: white;
+	background: url("img/search-icon.svg") no-repeat white;
+	background-size: 80%;
+	background-position: center;
+	cursor: pointer;
+}
+
+nav {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+nav a {
+	font-size: var(--text-size);
+	color: white;
+	text-decoration: none;
+	padding: 1rem 1.5rem;
+}
+
+#logo {
+	padding: 0 3rem 0 0;
+}
+
+#logo p {
+	font-size: var(--text-size);
+	font-family: "Righteous", cursive;
+	background: #ffb458;
+	color: black;
+	border-radius: 10px;
+	padding: 0.5rem;
+}
+
+/* Intro */
+
+main {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.intro-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 1rem;
+	height: auto;
+	text-align: center;
+	background: #000000be;
+	color: white;
+}
+
+.intro-container::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("img/movie-poster.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -1;
+	opacity: 1;
+	border-radius: 10px;
+}
+
+.intro-container h1 {
+	padding: 1rem 0;
+}
+
+/* Movie & TV List */
+
+.main-container {
+	position: relative;
+	padding: 1rem 0;
+}
+
+.prev,
+.next {
+	position: absolute;
+	top: 50%;
+	height: 55px;
+	width: 50px;
+	border: none;
+	cursor: pointer;
+}
+
+.prev {
+	left: -1.5%;
+	background: url("img/left-icon.png") no-repeat;
+	background-position: center;
+}
+
+.next {
+	right: -1.5%;
+	background: url("img/right-icon.png") no-repeat;
+	background-position: center;
+}
+
+.category {
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid #ffb458;
+	margin: 1rem 0;
+	padding: 0.5rem 0;
+}
+
+.category h3 {
+	font-size: 1.5rem;
+}
+
+.category button {
+	border: none;
+	border-radius: 5px;
+	margin-left: 20px;
+	width: 110px;
+	height: 35px;
+	font-family: "Baloo Bhaijaan 2", cursive;
+	font-size: 1.1em;
+	background: #1c1c50;
+	color: white;
+	cursor: pointer;
+}
+
+.movie-list,
+.tv-list,
+.query-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.movie-list-item,
+.tv-list-item,
+.query-list-item {
+	margin: 0.5rem;
+	box-shadow: 0 0 5px rgb(146, 146, 146);
+	cursor: pointer;
+	height: 350px;
+	width: 200px;
+}
+
+.movie-list img,
+.tv-list img,
+.query-list img {
+	width: 100%;
+	height: 300px;
+	border-bottom: 1px solid white;
+}
+
+.movie-list h3,
+.tv-list h3,
+.query-list h3 {
+	padding: 0 1rem;
+	font-weight: 400;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* Click Query (Javascript) */
+
+.click-query {
+	display: grid;
+	grid-template-columns: 270px auto;
+	background: #141414;
+	padding: 1rem;
+	border: 1px solid white;
+}
+
+.item-stats {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.click-query img {
+	margin: auto 0;
+	border: 1px solid white;
+	width: 250px;
+}
+
+.click-query h3 {
+	font-size: 1.5rem;
+}
+
+.click-query p {
+	margin-top: 2rem;
+	grid-column: 1/-1;
+	letter-spacing: 2px;
+}
+/* Footer */
+
+footer {
+	height: 80px;
+	background: #13133a;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer a {
+	color: rgb(185, 185, 185);
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+/* Hover */
+
+nav a:hover {
+	background: #0e0e2b;
+	font-weight: 700;
+	padding: 1rem 2rem;
+	transition: 0.3s ease;
+}
+
+button:hover:not(.prev, .next) {
+	background: #ffb458;
+	color: black;
+	transition: 0.6s ease;
+}
+
+.movie-list-item:hover,
+.tv-list-item:hover,
+.query-list-item:hover {
+	transition: 0.6s ease;
+	background: white;
+	color: black;
+	transform: scale(1.05);
+	font-size: 700;
+}
+
+#search-submit:hover {
+	background: url("img/search-icon.svg") no-repeat #5e5e5e;
+	background-size: 90%;
+	background-position: center;
+	transition: 0.3s ease;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	transition: 0.3s ease;
+	color: #ffb458;
+}
+
+.prev:hover {
+	border-right: 7px solid #ffb458;
+	background: rgba(255, 255, 255, 0.1) url("img/left-icon.png") no-repeat;
+	background-position: center;
+	transition: 0.3s ease;
+}
+
+.next:hover {
+	border-left: 7px solid #ffb458;
+	background: rgba(255, 255, 255, 0.1) url("img/right-icon.png") no-repeat;
+	background-position: center;
+	transition: 0.3s ease;
+}
+
+/* */

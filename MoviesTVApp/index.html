@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;700&family=Righteous&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Movies API</title>
+	</head>
+	<body id="homepage">
+		<!-- Navbar -->
+		<header>
+			<nav>
+				<div id="logo"><p>Lights Out</p></div>
+				<a href="#">Home</a>
+				<a href="#movies-h3">Movies</a>
+				<a href="#tv-h3">TV Series</a>
+				<form action="search.html">
+					<input class="searchbox" type="text" placeholder="Search" />
+					<input class="search-submit" type="submit" value="" />
+				</form>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Intro -->
+			<div class="intro-container">
+				<h1>Browse the latest Movies and TV Series</h1>
+				<p>
+					Browse the latest and greatest movies and tv series from around the
+					world. Learn what they are about by searching for what your are
+					looking for. We provide a description and rating for everything!
+				</p>
+			</div>
+
+			<!-- Movie List -->
+			<div class="main-container">
+				<div class="category">
+					<h3 id="movies-h3">Movies</h3>
+					<button id="latest-btn">Latest</button>
+					<button id="popular-btn">Popular</button>
+					<button id="rating-btn">Top-rated</button>
+				</div>
+
+				<div class="movie-list"></div>
+				<button class="prev prev-movie"></button>
+				<button class="next next-movie"></button>
+			</div>
+
+			<!-- TV Series List -->
+			<div class="main-container">
+				<div class="category">
+					<h3 id="tv-h3">TV Series</h3>
+					<button id="tv-latest-btn">Latest</button>
+					<button id="tv-popular-btn">Popular</button>
+					<button id="tv-rating-btn">Top-rated</button>
+				</div>
+
+				<div class="tv-list"></div>
+				<button class="prev prev-tv"></button>
+				<button class="next next-tv"></button>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer>
+			<a href="#">Back to top</a>
+			<h3>&copy; Copyright Ahmed Muhammed 2022</h3>
+		</footer>
+
+		<script src="app.js"></script>
+	</body>
+</html>
